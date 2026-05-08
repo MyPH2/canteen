@@ -1,0 +1,496 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Chinese Restaurant Mobile Page</title>
+
+<style>
+
+:root{
+    --main-red:#d62828;
+    --main-yellow:#f4c542;
+    --light-bg:#f5f5f5;
+    --text-dark:#333;
+    --blue:#2da8ff;
+    --green:#93c01f;
+}
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, sans-serif;
+}
+
+body{
+    background:var(--light-bg);
+    color:var(--text-dark);
+}
+
+.container{
+    width:100%;
+    max-width:500px;
+    margin:auto;
+    padding:20px;
+}
+
+/* =========================
+   1. STORE NAME + LOGO
+========================= */
+
+.store-header{
+    text-align:center;
+    margin-top:10px;
+    margin-bottom:35px;
+}
+
+.store-logo{
+    width:70px;
+    height:70px;
+    border-radius:50%;
+    object-fit:cover;
+    border:4px solid var(--main-yellow);
+    margin-bottom:12px;
+}
+
+.store-name{
+    display:inline-block;
+    padding:10px 22px;
+    border:4px solid #ff7070;
+    color:var(--main-red);
+    font-size:28px;
+    font-weight:bold;
+    border-radius:10px;
+    background:#fff;
+}
+
+/* =========================
+   2. INFO BOXES
+========================= */
+
+.info-grid{
+    display:grid;
+    grid-template-columns:1fr 1fr 1fr;
+    gap:12px;
+    margin-bottom:40px;
+}
+
+.info-box{
+    background:white;
+    border:4px solid #666;
+    border-radius:10px;
+    padding:14px 8px;
+    text-align:center;
+    font-size:15px;
+    font-weight:bold;
+}
+
+.info-box a{
+    text-decoration:none;
+    color:#444;
+}
+
+/* =========================
+   3. MENU BUTTONS
+========================= */
+
+.menu-section{
+    display:flex;
+    justify-content:space-around;
+    margin-bottom:45px;
+}
+
+.menu-card{
+    width:130px;
+    height:130px;
+    border:5px solid var(--main-yellow);
+    background:white;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    text-align:center;
+    font-size:30px;
+    font-weight:bold;
+    color:#d8a500;
+    border-radius:12px;
+    cursor:pointer;
+    transition:0.3s;
+}
+
+.menu-card:hover{
+    transform:scale(1.05);
+}
+
+/* =========================
+   4. MENU CONTENT
+========================= */
+
+.menu-content{
+    display:none;
+    background:white;
+    border-radius:14px;
+    padding:20px;
+    margin-bottom:30px;
+    box-shadow:0 4px 12px rgba(0,0,0,0.1);
+}
+
+.menu-title{
+    font-size:24px;
+    color:var(--main-red);
+    margin-bottom:18px;
+    text-align:center;
+}
+
+.menu-item{
+    display:flex;
+    justify-content:space-between;
+    padding:12px 0;
+    border-bottom:1px dashed #ddd;
+}
+
+.menu-photo{
+    width:100%;
+    border-radius:12px;
+    margin-top:20px;
+    cursor:pointer;
+}
+
+.download-btn{
+    display:block;
+    text-align:center;
+    margin-top:15px;
+    background:var(--main-red);
+    color:white;
+    text-decoration:none;
+    padding:14px;
+    border-radius:10px;
+    font-weight:bold;
+}
+
+/* =========================
+   5. JUMP BUTTONS
+========================= */
+
+.jump-buttons{
+    display:flex;
+    flex-direction:column;
+    gap:18px;
+    margin-bottom:35px;
+}
+
+.jump-btn{
+    display:block;
+    text-decoration:none;
+    text-align:center;
+    background:white;
+    border:4px solid var(--blue);
+    color:var(--blue);
+    padding:16px;
+    border-radius:10px;
+    font-size:20px;
+    font-weight:bold;
+}
+
+/* =========================
+   6. SOCIAL ICONS
+========================= */
+
+.social-row{
+    display:flex;
+    justify-content:space-around;
+    margin-top:20px;
+}
+
+.social-btn{
+    width:80px;
+    height:80px;
+    border:4px solid var(--green);
+    border-radius:12px;
+    background:white;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    overflow:hidden;
+    transition:0.3s;
+}
+
+.social-btn:hover{
+    transform:scale(1.08);
+}
+
+.social-btn img{
+    width:55px;
+    height:55px;
+    object-fit:contain;
+}
+
+/* =========================
+   IMAGE MODAL
+========================= */
+
+.modal{
+    display:none;
+    position:fixed;
+    z-index:999;
+    left:0;
+    top:0;
+    width:100%;
+    height:100%;
+    background:rgba(0,0,0,0.85);
+    justify-content:center;
+    align-items:center;
+    padding:20px;
+}
+
+.modal img{
+    max-width:100%;
+    max-height:90%;
+    border-radius:14px;
+}
+
+.close{
+    position:absolute;
+    top:20px;
+    right:25px;
+    color:white;
+    font-size:40px;
+    cursor:pointer;
+}
+
+footer{
+    text-align:center;
+    padding:30px 0;
+    color:#666;
+    font-size:14px;
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+    <!-- =========================
+         1. STORE NAME + LOGO
+    ========================== -->
+
+    <div class="store-header">
+
+        <!-- CHANGE LOGO HERE -->
+        <img class="store-logo"
+             src="https://cdn-icons-png.flaticon.com/512/5787/5787016.png">
+
+        <!-- CHANGE STORE NAME HERE -->
+        <div class="store-name">
+            Golden Dragon Restaurant
+        </div>
+
+    </div>
+
+    <!-- =========================
+         2. ADDRESS / PHONE / HOURS
+    ========================== -->
+
+    <div class="info-grid">
+
+        <!-- CHANGE ADDRESS HERE -->
+        <div class="info-box">
+            123 Main Street
+        </div>
+
+        <!-- CHANGE PHONE HERE -->
+        <div class="info-box">
+            <a href=" ">
+                📞 +297 123 4567
+            </a >
+        </div>
+
+        <!-- CHANGE HOURS HERE -->
+        <div class="info-box">
+            11:00 - 22:00
+        </div>
+
+    </div>
+
+    <!-- =========================
+         3. DINE IN / TAKE OUT
+    ========================== -->
+
+    <div class="menu-section">
+
+        <div class="menu-card"
+             onclick="showMenu('dineinMenu')">
+            dine in
+        </div>
+
+        <div class="menu-card"
+             onclick="showMenu('takeoutMenu')">
+            take out
+        </div>
+
+    </div>
+
+    <!-- =========================
+         DINE IN MENU
+    ========================== -->
+
+    <div id="dineinMenu" class="menu-content">
+
+        <div class="menu-title">
+            Dine In Menu
+        </div>
+
+        <div class="menu-item">
+            <span>Kung Pao Chicken</span>
+            <span>$12.99</span>
+        </div>
+
+        <div class="menu-item">
+            <span>Fried Rice</span>
+            <span>$9.99</span>
+        </div>
+
+        <div class="menu-item">
+            <span>Beef Noodles</span>
+            <span>$13.99</span>
+        </div>
+
+    </div>
+
+    <!-- =========================
+         TAKE OUT MENU
+    ========================== -->
+
+    <div id="takeoutMenu" class="menu-content">
+
+        <div class="menu-title">
+            Take Out Menu
+        </div>
+
+        <!-- CHANGE MENU IMAGE HERE -->
+        <img class="menu-photo"
+             onclick="openModal(this.src)"
+             src="https://images.unsplash.com/photo-1544025162-d76694265947?q=80&w=1200&auto=format&fit=crop">
+
+        <!-- CHANGE DOWNLOAD IMAGE HERE -->
+        <a class="download-btn"
+           href="https://images.unsplash.com/photo-1544025162-d76694265947?q=80&w=1200&auto=format&fit=crop"
+           download>
+           Download Full Menu
+        </a >
+
+    </div>
+
+    <!-- =========================
+         4. MAP / WHATSAPP
+    ========================== -->
+
+    <div class="jump-buttons">
+
+        <!-- CHANGE GOOGLE MAP LINK -->
+        <a class="jump-btn"
+           href="https://maps.google.com"
+           target="_blank">
+           Click To Open Google Map
+        </a >
+
+        <!-- CHANGE WHATSAPP LINK -->
+        <a class="jump-btn"
+           href="https://wa.me/2971234567"
+           target="_blank">
+           Click To Chat On WhatsApp
+        </a >
+
+    </div>
+
+    <!-- =========================
+         5. SOCIAL MEDIA
+    ========================== -->
+
+    <div class="social-row">
+
+        <!-- TIKTOK -->
+        <a class="social-btn"
+           href="https://www.tiktok.com"
+           target="_blank">
+
+            <img src="https://cdn-icons-png.flaticon.com/512/3046/3046121.png">
+
+        </a >
+
+        <!-- INSTAGRAM -->
+        <a class="social-btn"
+           href="https://www.instagram.com"
+           target="_blank">
+
+            <img src="https://cdn-icons-png.flaticon.com/512/2111/2111463.png">
+
+        </a >
+
+        <!-- FACEBOOK -->
+        <a class="social-btn"
+           href="https://www.facebook.com"
+           target="_blank">
+
+            <img src="https://cdn-icons-png.flaticon.com/512/733/733547.png">
+
+        </a >
+
+    </div>
+
+    <footer>
+        © 2026 Golden Dragon Restaurant
+    </footer>
+
+</div>
+
+<!-- =========================
+     IMAGE POPUP
+========================= -->
+
+<div id="imgModal" class="modal">
+
+    <span class="close"
+          onclick="closeModal()">
+          &times;
+    </span>
+
+    <img id="modalImg">
+
+</div>
+
+<script>
+
+/* =========================
+   SHOW MENU
+========================= */
+
+function showMenu(menuId){
+
+    document.getElementById("dineinMenu").style.display = "none";
+    document.getElementById("takeoutMenu").style.display = "none";
+
+    document.getElementById(menuId).style.display = "block";
+}
+
+/* =========================
+   IMAGE POPUP
+========================= */
+
+function openModal(src){
+
+    document.getElementById("imgModal").style.display = "flex";
+    document.getElementById("modalImg").src = src;
+}
+
+function closeModal(){
+
+    document.getElementById("imgModal").style.display = "none";
+}
+
+</script>
+
+</body>
+</html>
