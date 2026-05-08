@@ -1,0 +1,168 @@
+{
+  "brand": {
+    "title": "Universal Restaurant",
+    "sealLine1": "UNIVERSAL",
+    "sealLine2": "RESTAURANT",
+    "taglineTop": "Authentic Chinese Cuisine",
+    "taglineBottom": "Timeless Flavors"
+  },
+  "contact": {
+    "addressLine1": "Wilhelminastraat 71",
+    "addressLine2": "Oranjestad, Aruba",
+    "addressUrl": "https://www.google.com/maps/search/?api=1&query=Wilhelminastraat%2071%2C%20Oranjestad%2C%20Aruba",
+    "phoneLabel": "Tel:",
+    "phoneNumber": "582-3111",
+    "phoneUrl": "tel:5823111",
+    "hours": "11:00 AM - 10:00 PM"
+  },
+  "cards": {
+    "dineIn": {
+      "title": "Dine In",
+      "description": "Enjoy in our comfortable ambiance"
+    },
+    "takeOut": {
+      "title": "Take Out",
+      "description": "Delicious Chinese food to go"
+    }
+  },
+  "social": {
+    "heading": "Follow Us",
+    "items": [
+      {
+        "label": "TikTok",
+        "url": "https://www.tiktok.com/@universalrestaurant"
+      },
+      {
+        "label": "Instagram",
+        "url": "https://www.instagram.com/universalrestaurant"
+      },
+      {
+        "label": "Facebook",
+        "url": "https://www.facebook.com/universalrestaurant"
+      }
+    ]
+  },
+  "cta": {
+    "whatsappTitle": "Contact Us (WhatsApp)",
+    "whatsappUrl": "https://wa.me/00000000000?text=Hello%20Universal%20Restaurant",
+    "navigateTitle": "Tap to Navigate",
+    "navigateSubtitle": "Get Directions to Our Restaurant",
+    "navigateUrl": "https://www.google.com/maps/search/?api=1&query=Wilhelminastraat%2071%2C%20Oranjestad%2C%20Aruba"
+  },
+  "menus": {
+    "dineIn": {
+      "title": "Dine In Menu",
+      "subtitle": "Replace these placeholder items with the official dine-in menu entries in content.json.",
+      "sections": [
+        {
+          "title": "Signature Plates",
+          "items": [
+            {
+              "name": "Starter Set",
+              "note": "Edit in JSON"
+            },
+            {
+              "name": "Classic Bowl",
+              "note": "Edit in JSON"
+            },
+            {
+              "name": "Chef Special",
+              "note": "Edit in JSON"
+            }
+          ]
+        },
+        {
+          "title": "Rice and Noodles",
+          "items": [
+            {
+              "name": "Fried Rice",
+              "note": "Edit in JSON"
+            },
+            {
+              "name": "Lo Mein",
+              "note": "Edit in JSON"
+            },
+            {
+              "name": "House Noodles",
+              "note": "Edit in JSON"
+            }
+          ]
+        },
+        {
+          "title": "Drinks",
+          "items": [
+            {
+              "name": "Tea",
+              "note": "Edit in JSON"
+            },
+            {
+              "name": "Soda",
+              "note": "Edit in JSON"
+            },
+            {
+              "name": "Water",
+              "note": "Edit in JSON"
+            }
+          ]
+        }
+      ]
+    },
+    "takeOut": {
+      "title": "Take Out Menu",
+      "subtitle": "Replace these placeholder items with the official take-out menu entries in content.json.",
+      "sections": [
+        {
+          "title": "Popular Picks",
+          "items": [
+            {
+              "name": "Quick Combo 1",
+              "note": "Edit in JSON"
+            },
+            {
+              "name": "Quick Combo 2",
+              "note": "Edit in JSON"
+            },
+            {
+              "name": "Quick Combo 3",
+              "note": "Edit in JSON"
+            }
+          ]
+        },
+        {
+          "title": "Family Boxes",
+          "items": [
+            {
+              "name": "Family Box A",
+              "note": "Edit in JSON"
+            },
+            {
+              "name": "Family Box B",
+              "note": "Edit in JSON"
+            },
+            {
+              "name": "Family Box C",
+              "note": "Edit in JSON"
+            }
+          ]
+        },
+        {
+          "title": "Sides",
+          "items": [
+            {
+              "name": "Egg Roll",
+              "note": "Edit in JSON"
+            },
+            {
+              "name": "Wonton Soup",
+              "note": "Edit in JSON"
+            },
+            {
+              "name": "Spring Roll",
+              "note": "Edit in JSON"
+            }
+          ]
+        }
+      ]
+    }
+  }
+}
