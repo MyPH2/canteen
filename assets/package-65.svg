@@ -1,0 +1,23 @@
+<svg width="720" height="480" viewBox="0 0 720 480" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg65" x1="58" y1="46" x2="651" y2="432" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#FCE6CE"/>
+      <stop offset="1" stop-color="#EFB477"/>
+    </linearGradient>
+    <linearGradient id="tray65" x1="127" y1="102" x2="603" y2="357" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#224E46"/>
+      <stop offset="1" stop-color="#0E2421"/>
+    </linearGradient>
+  </defs>
+  <rect width="720" height="480" rx="32" fill="url(#bg65)"/>
+  <rect x="68" y="52" width="584" height="376" rx="34" fill="#FFF8EC"/>
+  <rect x="108" y="98" width="504" height="266" rx="32" fill="url(#tray65)"/>
+  <circle cx="208" cy="180" r="36" fill="#F0BE5E"/>
+  <circle cx="302" cy="170" r="36" fill="#F4F2E7"/>
+  <circle cx="396" cy="180" r="36" fill="#E56D3A"/>
+  <circle cx="490" cy="170" r="36" fill="#8DBE58"/>
+  <circle cx="255" cy="255" r="36" fill="#F4F2E7"/>
+  <circle cx="349" cy="245" r="36" fill="#E56D3A"/>
+  <circle cx="443" cy="255" r="36" fill="#F0BE5E"/>
+  <text x="360" y="406" text-anchor="middle" font-family="Georgia, 'Times New Roman', serif" font-size="64" font-weight="700" fill="#16342E">Rijst Tafel 65</text>
+</svg>

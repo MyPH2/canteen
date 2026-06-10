@@ -1,0 +1,22 @@
+<svg width="320" height="320" viewBox="0 0 320 320" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg" x1="40" y1="28" x2="278" y2="292" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#9F2418"/>
+      <stop offset="1" stop-color="#4C0C08"/>
+    </linearGradient>
+    <linearGradient id="ring" x1="70" y1="42" x2="266" y2="280" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#F8D68D"/>
+      <stop offset="1" stop-color="#C88A2F"/>
+    </linearGradient>
+  </defs>
+  <rect width="320" height="320" rx="64" fill="#120403"/>
+  <circle cx="160" cy="160" r="118" fill="url(#bg)"/>
+  <circle cx="160" cy="160" r="118" stroke="url(#ring)" stroke-width="12"/>
+  <circle cx="160" cy="160" r="91" fill="#F9F2E7" fill-opacity="0.97"/>
+  <circle cx="160" cy="160" r="79" stroke="#B62015" stroke-width="3" stroke-dasharray="4 8"/>
+  <path d="M102 102C122 84 144 74 160 74C176 74 198 84 218 102" stroke="#C52014" stroke-width="7" stroke-linecap="round"/>
+  <path d="M218 218C198 236 176 246 160 246C144 246 122 236 102 218" stroke="#C52014" stroke-width="7" stroke-linecap="round"/>
+  <text x="160" y="138" text-anchor="middle" font-family="Georgia, 'Times New Roman', serif" font-size="64" font-weight="700" fill="#18110D">U</text>
+  <text x="160" y="196" text-anchor="middle" font-family="Georgia, 'Times New Roman', serif" font-size="64" font-weight="700" fill="#18110D">R</text>
+  <text x="160" y="272" text-anchor="middle" font-family="Georgia, 'Times New Roman', serif" font-size="22" letter-spacing="5" fill="#F6D995">UNIVERSAL</text>
+</svg>

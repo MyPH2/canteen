@@ -1,0 +1,34 @@
+<svg width="248" height="640" viewBox="0 0 248 640" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="lanternBody" x1="44" y1="78" x2="204" y2="416" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#E45B3B"/>
+      <stop offset="0.4" stop-color="#A61711"/>
+      <stop offset="1" stop-color="#6E0C0A"/>
+    </linearGradient>
+    <linearGradient id="goldTrim" x1="56" y1="20" x2="192" y2="620" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#F6D98D"/>
+      <stop offset="1" stop-color="#B47422"/>
+    </linearGradient>
+  </defs>
+  <path d="M123 3V40" stroke="url(#goldTrim)" stroke-width="8" stroke-linecap="round"/>
+  <rect x="70" y="34" width="108" height="34" rx="14" fill="#1F0906" stroke="url(#goldTrim)" stroke-width="8"/>
+  <path d="M46 78C46 56 64 38 86 38H162C184 38 202 56 202 78V356C202 389 176 417 143 420L105 424C72 427 46 400 46 367V78Z" fill="url(#lanternBody)" stroke="url(#goldTrim)" stroke-width="8"/>
+  <path d="M66 102H182" stroke="#F5CB73" stroke-opacity="0.25" stroke-width="4"/>
+  <path d="M66 132H182" stroke="#F5CB73" stroke-opacity="0.25" stroke-width="4"/>
+  <path d="M66 162H182" stroke="#F5CB73" stroke-opacity="0.25" stroke-width="4"/>
+  <path d="M66 192H182" stroke="#F5CB73" stroke-opacity="0.25" stroke-width="4"/>
+  <path d="M66 222H182" stroke="#F5CB73" stroke-opacity="0.25" stroke-width="4"/>
+  <path d="M66 252H182" stroke="#F5CB73" stroke-opacity="0.25" stroke-width="4"/>
+  <path d="M66 282H182" stroke="#F5CB73" stroke-opacity="0.25" stroke-width="4"/>
+  <path d="M66 312H182" stroke="#F5CB73" stroke-opacity="0.25" stroke-width="4"/>
+  <path d="M66 342H182" stroke="#F5CB73" stroke-opacity="0.25" stroke-width="4"/>
+  <rect x="72" y="420" width="104" height="42" rx="10" fill="#23100D" stroke="url(#goldTrim)" stroke-width="8"/>
+  <path d="M124 462V522" stroke="url(#goldTrim)" stroke-width="10" stroke-linecap="round"/>
+  <path d="M86 462V516" stroke="url(#goldTrim)" stroke-width="6" stroke-linecap="round"/>
+  <path d="M102 462V516" stroke="url(#goldTrim)" stroke-width="6" stroke-linecap="round"/>
+  <path d="M146 462V516" stroke="url(#goldTrim)" stroke-width="6" stroke-linecap="round"/>
+  <path d="M162 462V516" stroke="url(#goldTrim)" stroke-width="6" stroke-linecap="round"/>
+  <path d="M124 522V630" stroke="#8E1711" stroke-width="12" stroke-linecap="round"/>
+  <path d="M124 520C128 540 142 566 157 585" stroke="url(#goldTrim)" stroke-width="4" stroke-linecap="round"/>
+  <path d="M124 520C120 540 106 566 91 585" stroke="url(#goldTrim)" stroke-width="4" stroke-linecap="round"/>
+</svg>

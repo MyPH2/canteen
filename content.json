@@ -1,167 +1,774 @@
 {
   "brand": {
-    "title": "Universal Restaurant",
-    "sealLine1": "UNIVERSAL",
-    "sealLine2": "RESTAURANT",
-    "taglineTop": "Authentic Chinese Cuisine",
-    "taglineBottom": "Timeless Flavors"
-  },
-  "contact": {
-    "addressLine1": "Wilhelminastraat 71",
-    "addressLine2": "Oranjestad, Aruba",
-    "addressUrl": "https://www.google.com/maps/search/?api=1&query=Wilhelminastraat%2071%2C%20Oranjestad%2C%20Aruba",
-    "phoneLabel": "Tel:",
-    "phoneNumber": "582-3111",
-    "phoneUrl": "tel:5823111",
-    "hours": "11:00 AM - 10:00 PM"
-  },
-  "cards": {
-    "dineIn": {
-      "title": "Dine In",
-      "description": "Enjoy in our comfortable ambiance"
-    },
-    "takeOut": {
-      "title": "Take Out",
-      "description": "Delicious Chinese food to go"
-    }
-  },
-  "social": {
-    "heading": "Follow Us",
-    "items": [
-      {
-        "label": "TikTok",
-        "url": "https://www.tiktok.com/@universalrestaurant"
-      },
-      {
-        "label": "Instagram",
-        "url": "https://www.instagram.com/universalrestaurant"
-      },
-      {
-        "label": "Facebook",
-        "url": "https://www.facebook.com/universalrestaurant"
-      }
+    "name": "Universal Restaurant",
+    "tagline": "Aruba Chinese Dining, served with warmth and tradition.",
+    "logoPath": "./assets/logo-placeholder.svg",
+    "heroImagePath": "./assets/hero-feast.svg",
+    "posterTitleLines": [
+      "UNIVERSAL",
+      "RESTAURANT"
+    ],
+    "posterSubtitleLines": [
+      "AUTHENTIC CHINESE CUISINE",
+      "TIMELESS FLAVORS"
     ]
   },
-  "cta": {
-    "whatsappTitle": "Contact Us (WhatsApp)",
-    "whatsappUrl": "https://wa.me/00000000000?text=Hello%20Universal%20Restaurant",
-    "navigateTitle": "Tap to Navigate",
-    "navigateSubtitle": "Get Directions to Our Restaurant",
-    "navigateUrl": "https://www.google.com/maps/search/?api=1&query=Wilhelminastraat%2071%2C%20Oranjestad%2C%20Aruba"
+  "contact": {
+    "addressLines": [
+      "Wilhelminastraat 71",
+      "Oranjestad, Aruba"
+    ],
+    "phoneLabel": "Call",
+    "phoneNumber": "+297 582 3111",
+    "phoneHref": "tel:+2975823111",
+    "hours": "Daily · 11:00 AM - 10:00 PM"
+  },
+  "links": {
+    "maps": "https://www.google.com/maps/search/?api=1&query=Wilhelminastraat%2071%2C%20Oranjestad%2C%20Aruba",
+    "whatsapp": "https://wa.me/2975823111?text=Hello%20Universal%20Restaurant%2C%20I%20have%20a%20question%20about%20your%20menu."
+  },
+  "social": {
+    "tiktok": {
+      "label": "TikTok",
+      "handle": "@universalrestaurant",
+      "url": "https://www.tiktok.com/@universalrestaurant"
+    },
+    "instagram": {
+      "label": "Instagram",
+      "handle": "@universalrestaurant",
+      "url": "https://www.instagram.com/universalrestaurant"
+    },
+    "facebook": {
+      "label": "Facebook",
+      "handle": "Universal Restaurant Aruba",
+      "url": "https://www.facebook.com/universalrestaurant"
+    }
+  },
+  "home": {
+    "takeOutDownloadPath": "./外卖菜单.png",
+    "intro": "Choose your dining style and jump straight to the details that matter on mobile.",
+    "socialHeading": "FOLLOW US",
+    "whatsappBannerLabel": "CONTACT US (WhatsApp)",
+    "navigationBannerTitle": "TAP TO NAVIGATE",
+    "navigationBannerSubtitle": "Get Directions to Our Restaurant",
+    "ctaLabels": {
+      "dineInTitle": "Dine In",
+      "dineInSubtitle": "Browse the full Aruba dine-in menu",
+      "dineInDescription": "Enjoy in our comfortable ambiance",
+      "takeOutTitle": "Take Out",
+      "takeOutSubtitle": "Download the take-out menu image",
+      "takeOutDescription": "Delicious Chinese food to go",
+      "map": "Open in Google Maps",
+      "whatsapp": "Chat on WhatsApp"
+    }
+  },
+  "dineIn": {
+    "noticeTitle": "House Notice",
+    "noticeBody": "All dine-in prices are listed in Florin. A 15% service charge will be added to your bill. Ask the team for daily seafood availability and wine bottle options.",
+    "categories": [
+      "A La Carte",
+      "Rijst Tafel 55",
+      "Rijst Tafel 65"
+    ]
   },
   "menus": {
-    "dineIn": {
-      "title": "Dine In Menu",
-      "subtitle": "Replace these placeholder items with the official dine-in menu entries in content.json.",
-      "sections": [
-        {
-          "title": "Signature Plates",
-          "items": [
-            {
-              "name": "Starter Set",
-              "note": "Edit in JSON"
-            },
-            {
-              "name": "Classic Bowl",
-              "note": "Edit in JSON"
-            },
-            {
-              "name": "Chef Special",
-              "note": "Edit in JSON"
-            }
-          ]
-        },
-        {
-          "title": "Rice and Noodles",
-          "items": [
-            {
-              "name": "Fried Rice",
-              "note": "Edit in JSON"
-            },
-            {
-              "name": "Lo Mein",
-              "note": "Edit in JSON"
-            },
-            {
-              "name": "House Noodles",
-              "note": "Edit in JSON"
-            }
-          ]
-        },
-        {
-          "title": "Drinks",
-          "items": [
-            {
-              "name": "Tea",
-              "note": "Edit in JSON"
-            },
-            {
-              "name": "Soda",
-              "note": "Edit in JSON"
-            },
-            {
-              "name": "Water",
-              "note": "Edit in JSON"
-            }
-          ]
-        }
+    "aLaCarte": [
+      {
+        "title": "Appetizers",
+        "items": [
+          {
+            "name": "Variation of Chinese appetizer",
+            "price": "Afl 31.75",
+            "description": "5 pcs shrimp roll and 5 pcs triangle chicken filling."
+          },
+          {
+            "name": "Shrimpballs toast (6 pcs)",
+            "price": "Afl 45.00"
+          },
+          {
+            "name": "Eggroll (2 pcs)",
+            "price": "Afl 14.00"
+          },
+          {
+            "name": "Chicken sate (8 pcs)",
+            "price": "Afl 17.50"
+          },
+          {
+            "name": "Fried wonton (8 pcs)",
+            "price": "Afl 19.50"
+          },
+          {
+            "name": "Shrimps cocktail",
+            "price": "Afl 37.75"
+          },
+          {
+            "name": "Steam wonton (8 pcs)",
+            "price": "Afl 30.50"
+          },
+          {
+            "name": "Kroepoek (medium)",
+            "price": "Afl 7.75"
+          },
+          {
+            "name": "Kroepoek (large)",
+            "price": "Afl 11.00"
+          }
+        ]
+      },
+      {
+        "title": "Soups",
+        "items": [
+          {
+            "name": "Egg drop soup",
+            "price": "Afl 11.50"
+          },
+          {
+            "name": "Fresh homemade wonton soup",
+            "price": "Afl 14.00",
+            "description": "Chicken and shrimp wonton with slices of roast pork."
+          },
+          {
+            "name": "Grouper cilantro soup",
+            "price": "Afl 17.25"
+          },
+          {
+            "name": "Chicken corn soup",
+            "price": "Afl 12.75"
+          },
+          {
+            "name": "Chinese soup",
+            "price": "Afl 14.00"
+          },
+          {
+            "name": "Vegetable soup",
+            "price": "Afl 11.25"
+          }
+        ]
+      },
+      {
+        "title": "Chicken",
+        "items": [
+          {
+            "name": "Chicken w/ garden fresh vegetable",
+            "price": "Afl 43.75",
+            "description": "Sliced chicken cooked with garden fresh vegetables in oyster sauce."
+          },
+          {
+            "name": "Sizzling black bean chicken",
+            "price": "Afl 41.75",
+            "description": "Fresh sliced chicken with vegetables served on a sizzling hot plate."
+          },
+          {
+            "name": "Cashew chicken",
+            "price": "Afl 42.75",
+            "description": "Diced chicken with cashew nuts, celery and carrots in spicy sauce.",
+            "tags": [
+              "Spicy"
+            ]
+          },
+          {
+            "name": "Sesame chicken",
+            "price": "Afl 40.75",
+            "description": "Boneless chicken sauteed with sesame, sweet-sour notes and fresh vegetables.",
+            "tags": [
+              "Spicy"
+            ]
+          },
+          {
+            "name": "Roast chicken Cantonese style (half)",
+            "price": "Afl 32.75",
+            "description": "Homemade chef-seasoned crispy roast chicken cut in pieces."
+          },
+          {
+            "name": "Roast chicken Cantonese style (whole)",
+            "price": "Afl 57.00",
+            "description": "Whole crispy Cantonese-style roast chicken."
+          },
+          {
+            "name": "Sweet sour chicken",
+            "price": "Afl 39.50"
+          },
+          {
+            "name": "Curry chicken",
+            "price": "Afl 39.50"
+          },
+          {
+            "name": "Honey chicken",
+            "price": "Afl 41.75"
+          },
+          {
+            "name": "Orange chicken",
+            "price": "Afl 41.75"
+          },
+          {
+            "name": "Sichuan chicken",
+            "price": "Afl 45.75",
+            "tags": [
+              "Spicy"
+            ]
+          },
+          {
+            "name": "Spanish chicken",
+            "price": "Afl 34.00"
+          },
+          {
+            "name": "Chicken ala parilla",
+            "price": "Afl 34.00",
+            "tags": [
+              "Spicy"
+            ]
+          }
+        ]
+      },
+      {
+        "title": "Duck",
+        "items": [
+          {
+            "name": "Universal roast duck (half)",
+            "price": "Afl 54.50",
+            "description": "House special roast duck with a seasoning recipe passed down for 3 generations.",
+            "tags": [
+              "House Special"
+            ]
+          },
+          {
+            "name": "Universal roast duck (whole)",
+            "price": "Afl 102.00",
+            "description": "Whole roast duck prepared with the Universal family recipe.",
+            "tags": [
+              "House Special"
+            ]
+          }
+        ]
+      },
+      {
+        "title": "Beef",
+        "items": [
+          {
+            "name": "Sizzling Chinese steak",
+            "price": "Afl 48.75",
+            "description": "Tenderloin steak sauteed in chef special onion sauce on a sizzling plate."
+          },
+          {
+            "name": "Tenderloin w/ garden fresh vegetable",
+            "price": "Afl 48.50",
+            "description": "Tenderloin slices with fresh vegetables in oyster sauce."
+          },
+          {
+            "name": "Tenderloin ginger",
+            "price": "Afl 52.00",
+            "description": "Tenderloin stir-fried with ginger and green onion in oyster sauce."
+          },
+          {
+            "name": "Sichuan tenderloin",
+            "price": "Afl 52.00",
+            "tags": [
+              "Spicy"
+            ]
+          },
+          {
+            "name": "Curry beef",
+            "price": "Afl 48.50"
+          },
+          {
+            "name": "Tenderloin cutsmall",
+            "price": "Afl 43.25"
+          },
+          {
+            "name": "Spanish steak",
+            "price": "Afl 45.75"
+          },
+          {
+            "name": "Black pepper steak",
+            "price": "Afl 46.75"
+          },
+          {
+            "name": "American steak",
+            "price": "Afl 46.25"
+          },
+          {
+            "name": "Filet mignon",
+            "price": "Afl 46.75"
+          },
+          {
+            "name": "Steak ala parilla",
+            "price": "Afl 46.00",
+            "tags": [
+              "Spicy"
+            ]
+          }
+        ]
+      },
+      {
+        "title": "Pork",
+        "items": [
+          {
+            "name": "Salt and pepper pork chop",
+            "price": "Afl 42.25",
+            "tags": [
+              "Spicy"
+            ]
+          },
+          {
+            "name": "Sweet sour pork",
+            "price": "Afl 40.50"
+          },
+          {
+            "name": "Honey pork chop",
+            "price": "Afl 43.00",
+            "description": "Lightly breaded pork chop stir-fried with garlic and green onion in honey sauce."
+          },
+          {
+            "name": "Roast pork with garden fresh vegetable",
+            "price": "Afl 45.00",
+            "description": "Sliced roast pork with fresh vegetables in oyster sauce."
+          },
+          {
+            "name": "Crispy roast pork (homemade)",
+            "price": "Afl 53.25"
+          },
+          {
+            "name": "Pork chop Chinese style",
+            "price": "Afl 43.25",
+            "description": "Cut pieces of pork chop sauteed with vegetables in garlic sauce."
+          }
+        ]
+      },
+      {
+        "title": "Seafood",
+        "items": [
+          {
+            "name": "Grouper with garden fresh vegetable",
+            "price": "Afl 59.50",
+            "description": "Fresh sliced local grouper sauteed with vegetables in garlic and ginger sauce."
+          },
+          {
+            "name": "Sweet & sour grouper",
+            "price": "Afl 61.50"
+          },
+          {
+            "name": "Salt & pepper grouper",
+            "price": "Afl 61.50",
+            "tags": [
+              "Spicy"
+            ]
+          },
+          {
+            "name": "Steamed fresh local grouper",
+            "price": "Afl 62.75"
+          },
+          {
+            "name": "Roast jumbo garlic shrimp",
+            "price": "Afl 65.00",
+            "description": "Whole shrimp roasted with chef-made garlic sauce.",
+            "tags": [
+              "30-40 min"
+            ]
+          },
+          {
+            "name": "Sichuan shrimp",
+            "price": "Afl 57.75",
+            "tags": [
+              "Spicy"
+            ]
+          },
+          {
+            "name": "Caribbean lobster",
+            "price": "Market price",
+            "description": "Fresh lobster meat with ginger and green onion in chef special spicy sauce over Cantonese lo mein.",
+            "tags": [
+              "Spicy",
+              "Market Price"
+            ]
+          },
+          {
+            "name": "Sweet & sour shrimp",
+            "price": "Afl 53.25"
+          },
+          {
+            "name": "Shrimp with garden fresh vegetable",
+            "price": "Afl 54.50"
+          },
+          {
+            "name": "Curry shrimp",
+            "price": "Afl 54.50"
+          },
+          {
+            "name": "Emperor golden crispy shrimp",
+            "price": "Afl 54.75"
+          },
+          {
+            "name": "Shrimp ala parilla",
+            "price": "Afl 53.25",
+            "tags": [
+              "Spicy"
+            ]
+          },
+          {
+            "name": "Mixed seafood",
+            "price": "Afl 57.00",
+            "description": "Shrimp, fish and squid sauteed with fresh vegetables."
+          },
+          {
+            "name": "Curry seafood",
+            "price": "Afl 55.00"
+          },
+          {
+            "name": "Squid with black bean sauce",
+            "price": "Afl 52.25"
+          },
+          {
+            "name": "Fried squid with salt & pepper",
+            "price": "Afl 55.50",
+            "tags": [
+              "Spicy"
+            ]
+          },
+          {
+            "name": "Ginger conch",
+            "price": "Afl 69.75"
+          },
+          {
+            "name": "Conch with garden fresh vegetable",
+            "price": "Afl 69.00"
+          }
+        ]
+      },
+      {
+        "title": "Noodles",
+        "items": [
+          {
+            "name": "Roast pork chow mein",
+            "price": "Afl 42.75"
+          },
+          {
+            "name": "Mixed chow mein",
+            "price": "Afl 46.75"
+          },
+          {
+            "name": "Seafood chow mein",
+            "price": "Afl 49.25"
+          },
+          {
+            "name": "Shrimp lo mein",
+            "price": "Afl 53.50"
+          },
+          {
+            "name": "Singapore rice noodle",
+            "price": "Afl 40.75",
+            "description": "Shrimp, sliced roast pork and egg with sour vegetables.",
+            "tags": [
+              "Curry Spiced"
+            ]
+          }
+        ]
+      },
+      {
+        "title": "Fried Rice",
+        "items": [
+          {
+            "name": "Pair fried rice (2 types sauce)",
+            "price": "Afl 36.00",
+            "description": "Chicken in tomato sweet sauce and shrimp with egg in white sauce over fried rice."
+          },
+          {
+            "name": "Young chow fried rice",
+            "price": "Afl 33.00"
+          },
+          {
+            "name": "Mixed fried rice",
+            "price": "Afl 31.75"
+          },
+          {
+            "name": "Beef fried rice",
+            "price": "Afl 29.25"
+          },
+          {
+            "name": "Chicken fried rice",
+            "price": "Afl 26.75"
+          },
+          {
+            "name": "Roast pork fried rice",
+            "price": "Afl 30.50"
+          }
+        ]
+      },
+      {
+        "title": "Specialties",
+        "items": [
+          {
+            "name": "Mix combination with garden fresh vegetables",
+            "price": "Afl 46.75",
+            "description": "Chicken, roast pork, beef, shrimp and squid in oyster sauce."
+          },
+          {
+            "name": "Two treasure pot",
+            "price": "Afl 52.50",
+            "description": "Eggplant and tofu stuffed with minced shrimp and chicken."
+          },
+          {
+            "name": "Ma po tofu",
+            "price": "Afl 45.00",
+            "tags": [
+              "Spicy"
+            ]
+          },
+          {
+            "name": "Stuffed fried aubergine",
+            "price": "Afl 52.50"
+          },
+          {
+            "name": "Mix combination Chinese pot",
+            "price": "Afl 50.00",
+            "description": "Combination of meat and seafood in garlic sauce with vermicelli noodle."
+          }
+        ]
+      },
+      {
+        "title": "Vegetarian",
+        "items": [
+          {
+            "name": "Vegetable fried rice",
+            "price": "Afl 22.75"
+          },
+          {
+            "name": "Vegetable chow mein",
+            "price": "Afl 35.50"
+          },
+          {
+            "name": "Mix vegetable with tofu",
+            "price": "Afl 40.50"
+          },
+          {
+            "name": "Singapore rice noodle (vegetarian)",
+            "price": "Afl 37.00"
+          },
+          {
+            "name": "Cantonese rice noodle (vegetarian)",
+            "price": "Afl 37.00"
+          },
+          {
+            "name": "Curry mix vegetable",
+            "price": "Afl 36.75"
+          },
+          {
+            "name": "Salt pepper tofu",
+            "price": "Afl 31.75"
+          },
+          {
+            "name": "Crispy golden tofu",
+            "price": "Afl 36.50",
+            "description": "Fried tofu glazed in pineapple sweet onion sauce."
+          },
+          {
+            "name": "Mock chicken",
+            "price": "Afl 43.75"
+          },
+          {
+            "name": "Eggplant & tofu",
+            "price": "Afl 39.50",
+            "description": "Sliced aubergine and tofu wok-tossed in aromatic garlic sauce."
+          },
+          {
+            "name": "Buddha’s delight",
+            "price": "Afl 44.75",
+            "description": "Bok choy, broccoli, carrot, champignon, black mushroom and vermicelli with cashew."
+          },
+          {
+            "name": "Steam bok choy (half / whole)",
+            "price": "Afl 19.50 / 35.50"
+          },
+          {
+            "name": "Steam Chinese broccoli (half / whole)",
+            "price": "Afl 19.50 / 35.50"
+          },
+          {
+            "name": "Steam choy sum (half / whole)",
+            "price": "Afl 19.50 / 35.50"
+          },
+          {
+            "name": "Steam American broccoli (half / whole)",
+            "price": "Afl 19.50 / 35.50"
+          }
+        ]
+      },
+      {
+        "title": "Side Orders",
+        "items": [
+          {
+            "name": "White rice",
+            "price": "Afl 7.25"
+          },
+          {
+            "name": "French fries",
+            "price": "Afl 7.25"
+          },
+          {
+            "name": "Fried rice (personal size)",
+            "price": "Afl 14.25"
+          },
+          {
+            "name": "Mix steam vegetable (half)",
+            "price": "Afl 19.50"
+          },
+          {
+            "name": "Rice noodle w/ ginger (personal size)",
+            "price": "Afl 19.75"
+          }
+        ]
+      },
+      {
+        "title": "Sauces",
+        "items": [
+          {
+            "name": "Black bean sauce",
+            "price": "Afl 4.00"
+          },
+          {
+            "name": "Garlic sauce",
+            "price": "Afl 3.50"
+          },
+          {
+            "name": "Oyster sauce",
+            "price": "Afl 3.50"
+          },
+          {
+            "name": "Black pepper sauce",
+            "price": "Afl 3.50"
+          },
+          {
+            "name": "Pinda’s sauce",
+            "price": "Afl 4.00"
+          },
+          {
+            "name": "Onion sauce",
+            "price": "Afl 3.50"
+          },
+          {
+            "name": "Curry sauce",
+            "price": "Afl 3.50"
+          },
+          {
+            "name": "Fresh sliced pepper",
+            "price": "Afl 2.75"
+          },
+          {
+            "name": "Pika cu vinager",
+            "price": "Afl 3.50"
+          }
+        ]
+      },
+      {
+        "title": "Drinks",
+        "items": [
+          {
+            "name": "Soda can",
+            "price": "Afl 6.00"
+          },
+          {
+            "name": "Fuze Tea",
+            "price": "Afl 6.50"
+          },
+          {
+            "name": "Homemade ice tea",
+            "price": "Afl 8.50"
+          },
+          {
+            "name": "Apple juice",
+            "price": "Afl 6.50"
+          },
+          {
+            "name": "Orange juice",
+            "price": "Afl 6.50"
+          },
+          {
+            "name": "Cranberry juice",
+            "price": "Afl 6.50"
+          },
+          {
+            "name": "Pineapple juice",
+            "price": "Afl 6.50"
+          },
+          {
+            "name": "Fruit punch",
+            "price": "Afl 7.50"
+          },
+          {
+            "name": "Fresh lemonade (homemade)",
+            "price": "Afl 12.00"
+          },
+          {
+            "name": "Piña Colada (virgin)",
+            "price": "Afl 14.25"
+          },
+          {
+            "name": "Piña Colada (with rum)",
+            "price": "Afl 23.00"
+          },
+          {
+            "name": "Balashi",
+            "price": "Afl 7.75"
+          },
+          {
+            "name": "Chill",
+            "price": "Afl 8.00"
+          },
+          {
+            "name": "Heineken",
+            "price": "Afl 9.75"
+          },
+          {
+            "name": "Amstel Bright",
+            "price": "Afl 10.25"
+          },
+          {
+            "name": "Prosecco La Marca (187 ml)",
+            "price": "Afl 18.50"
+          },
+          {
+            "name": "Wine (per glass)",
+            "price": "Afl 16.50",
+            "description": "For wine bottles, please ask for the wine list."
+          },
+          {
+            "name": "Liquor bar drinks",
+            "price": "Afl 15.50"
+          },
+          {
+            "name": "Regular bar drinks",
+            "price": "Afl 15.50"
+          },
+          {
+            "name": "Premium bar drinks",
+            "price": "Afl 16.50"
+          }
+        ]
+      }
+    ],
+    "rijstTafel55": {
+      "title": "Rijst Tafel 55",
+      "subtitle": "Shareable set menu",
+      "summary": "A curated table menu designed for guests who want a balanced introduction to Universal Restaurant's signature flavors.",
+      "description": "Use this as the go-to option for a relaxed set-style meal. Keep the PDF close at hand so guests can view the exact lineup while browsing on mobile.",
+      "filePath": "./Rijst Tafel 55.pdf",
+      "previewImagePath": "./assets/package-55.svg",
+      "highlights": [
+        "Set-menu focused experience",
+        "Great for first-time dine-in guests",
+        "Easy PDF view and download on mobile"
       ]
     },
-    "takeOut": {
-      "title": "Take Out Menu",
-      "subtitle": "Replace these placeholder items with the official take-out menu entries in content.json.",
-      "sections": [
-        {
-          "title": "Popular Picks",
-          "items": [
-            {
-              "name": "Quick Combo 1",
-              "note": "Edit in JSON"
-            },
-            {
-              "name": "Quick Combo 2",
-              "note": "Edit in JSON"
-            },
-            {
-              "name": "Quick Combo 3",
-              "note": "Edit in JSON"
-            }
-          ]
-        },
-        {
-          "title": "Family Boxes",
-          "items": [
-            {
-              "name": "Family Box A",
-              "note": "Edit in JSON"
-            },
-            {
-              "name": "Family Box B",
-              "note": "Edit in JSON"
-            },
-            {
-              "name": "Family Box C",
-              "note": "Edit in JSON"
-            }
-          ]
-        },
-        {
-          "title": "Sides",
-          "items": [
-            {
-              "name": "Egg Roll",
-              "note": "Edit in JSON"
-            },
-            {
-              "name": "Wonton Soup",
-              "note": "Edit in JSON"
-            },
-            {
-              "name": "Spring Roll",
-              "note": "Edit in JSON"
-            }
-          ]
-        }
+    "rijstTafel65": {
+      "title": "Rijst Tafel 65",
+      "subtitle": "Premium set menu",
+      "summary": "A richer rijsttafel selection for guests who want a more generous tasting spread with classic house specialties.",
+      "description": "The PDF is included for direct viewing or download. Pair it with the a la carte list when guests want to compare the set with individual orders.",
+      "filePath": "./Rijst Tafel 65.pdf",
+      "previewImagePath": "./assets/package-65.svg",
+      "highlights": [
+        "Premium tasting-style package",
+        "Built from the official PDF menu",
+        "Best for guests comparing set versus single dishes"
       ]
     }
   }

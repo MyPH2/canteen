@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#f7efe2">
+  <title>Universal Restaurant | Dine In</title>
+  <link rel="preload" href="./content.json" as="fetch" crossorigin="anonymous">
+  <link rel="stylesheet" href="./styles.css">
+</head>
+<body class="dine-body" data-page="dine-in">
+  <main class="page-shell">
+    <div class="loading-state" data-loading>
+      <p class="status-note" style="color:#716158">Loading dine-in menu...</p>
+    </div>
+
+    <div class="error-state" data-error hidden></div>
+
+    <section data-page-root hidden>
+      <header class="dine-header">
+        <a href="./index.html">
+          <span class="jump-icon" data-icon="arrow"></span>
+          <span>Back to <span data-dine-brand>Universal Restaurant</span></span>
+        </a>
+      </header>
+
+      <section class="notice-card">
+        <h1 data-notice-title>House Notice</h1>
+        <p data-notice-body>All dine-in prices are listed in Florin. A 15% service charge will be added to your bill.</p>
+      </section>
+
+      <section class="menu-layout">
+        <aside class="menu-sidebar" aria-label="Menu navigation">
+          <div class="menu-group">
+            <h2>Categories</h2>
+            <div class="menu-switcher" data-main-categories></div>
+          </div>
+
+          <div class="menu-group" data-subnav-group>
+            <h2>A La Carte</h2>
+            <div class="section-switcher" data-sub-categories></div>
+          </div>
+        </aside>
+
+        <div data-menu-content></div>
+      </section>
+    </section>
+  </main>
+
+  <script src="./site.js"></script>
+</body>
+</html>

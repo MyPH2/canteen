@@ -1,0 +1,39 @@
+<svg width="1200" height="900" viewBox="0 0 1200 900" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <radialGradient id="bg" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(600 160) rotate(90) scale(520 740)">
+      <stop stop-color="#8F2318"/>
+      <stop offset="0.5" stop-color="#4E120D"/>
+      <stop offset="1" stop-color="#190706"/>
+    </radialGradient>
+    <linearGradient id="plate" x1="349" y1="238" x2="865" y2="752" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#F7E6B6"/>
+      <stop offset="1" stop-color="#C78E35"/>
+    </linearGradient>
+    <linearGradient id="food1" x1="427" y1="337" x2="777" y2="627" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#F1A44F"/>
+      <stop offset="1" stop-color="#B7381A"/>
+    </linearGradient>
+    <linearGradient id="food2" x1="470" y1="306" x2="819" y2="581" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#87B94B"/>
+      <stop offset="1" stop-color="#345A1A"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="900" rx="56" fill="url(#bg)"/>
+  <circle cx="596" cy="487" r="292" fill="#160706" fill-opacity="0.42"/>
+  <ellipse cx="600" cy="495" rx="292" ry="245" fill="url(#plate)"/>
+  <ellipse cx="600" cy="495" rx="256" ry="212" fill="#FAF2E5"/>
+  <path d="M413 517C479 404 613 313 751 355C841 382 864 480 802 569C736 661 556 695 447 631C395 600 385 561 413 517Z" fill="url(#food1)"/>
+  <path d="M478 472C541 382 658 368 732 422C786 463 808 546 735 595C658 646 504 619 462 549C445 521 450 504 478 472Z" fill="url(#food2)"/>
+  <path d="M510 386C548 413 570 454 577 510" stroke="#F7D57C" stroke-width="16" stroke-linecap="round"/>
+  <path d="M690 372C654 414 626 475 617 532" stroke="#F7D57C" stroke-width="16" stroke-linecap="round"/>
+  <circle cx="494" cy="486" r="28" fill="#FFF1D8"/>
+  <circle cx="730" cy="481" r="34" fill="#FFF1D8"/>
+  <circle cx="626" cy="579" r="26" fill="#FFF1D8"/>
+  <path d="M897 214C954 305 984 413 985 522" stroke="#D6A24A" stroke-width="12" stroke-linecap="round"/>
+  <path d="M932 178C989 269 1020 377 1020 486" stroke="#FFE4A8" stroke-width="12" stroke-linecap="round"/>
+  <path d="M286 214C229 305 199 413 198 522" stroke="#D6A24A" stroke-width="12" stroke-linecap="round"/>
+  <path d="M251 178C194 269 163 377 163 486" stroke="#FFE4A8" stroke-width="12" stroke-linecap="round"/>
+  <circle cx="903" cy="210" r="19" fill="#D7A553"/>
+  <circle cx="286" cy="210" r="19" fill="#D7A553"/>
+  <text x="600" y="142" text-anchor="middle" font-family="Georgia, 'Times New Roman', serif" font-size="56" letter-spacing="10" fill="#FBE7B8">ARUBA DINE IN</text>
+</svg>
