@@ -113,3 +113,53 @@ Open `index.html` through a local HTTP server and inspect widths `375`, `390`, `
 git add styles.css tests/test_site.py
 git commit -m "style: refine homepage action card borders"
 ```
+
+### Task 2: Unify the full-width banner frames
+
+**Files:**
+- Modify: `tests/test_site.py:124`
+- Modify: `styles.css:886-929`
+
+- [ ] **Step 1: Extend the failing CSS contract test**
+
+Add these assertions to `test_homepage_matches_poster_layout_contract`:
+
+```python
+self.assertIn("--poster-banner-corner", styles_css)
+self.assertIn(".poster-frame--banner::before", styles_css)
+self.assertIn(".poster-frame--banner::after", styles_css)
+```
+
+- [ ] **Step 2: Run the focused test and verify it fails**
+
+Run:
+
+```bash
+PYTHONDONTWRITEBYTECODE=1 python3 -m unittest tests.test_site.SiteContractTests.test_homepage_matches_poster_layout_contract -v
+```
+
+Expected: `FAIL` because the banner corner variable and active frame layers do not yet exist.
+
+- [ ] **Step 3: Apply the stepped silhouette and shared gold frame**
+
+Give `.poster-banner` the same 16-point stepped polygon used by the action cards, with `--poster-banner-corner: 20px`, `border: 0`, and `background: transparent`. Use `.poster-frame--banner::before` as the shared outer gold gradient and `.poster-frame--banner::after` as the 2px inset lacquer layer.
+
+Use variant-specific CSS custom properties so the two banners keep their current identities:
+
+```css
+.poster-banner--whatsapp {
+  --poster-banner-fill: linear-gradient(180deg, rgba(6, 65, 36, 0.98), rgba(3, 44, 26, 0.98));
+  --poster-banner-shadow: rgba(0, 20, 10, 0.24);
+}
+
+.poster-banner--navigate {
+  --poster-banner-fill: linear-gradient(180deg, rgba(104, 18, 13, 0.97), rgba(67, 10, 8, 0.98));
+  --poster-banner-shadow: rgba(26, 2, 2, 0.24);
+}
+```
+
+The inset layer must use `background: var(--poster-banner-fill)` and retain the same inner gold keyline as the action cards.
+
+- [ ] **Step 4: Run full automated and visual verification**
+
+Run the six site tests, JavaScript syntax check, JSON validation, and `git diff --check`. In the browser, verify all four homepage actions share the stepped silhouette at 375px, 390px, 430px, and 1280px with no overflow. Confirm the two banners remain green and red and retain their existing destinations.
