@@ -747,29 +747,110 @@
     ],
     "rijstTafel55": {
       "title": "Rijst Tafel 55",
-      "subtitle": "Shareable set menu",
-      "summary": "A curated table menu designed for guests who want a balanced introduction to Universal Restaurant's signature flavors.",
-      "description": "Use this as the go-to option for a relaxed set-style meal. Keep the PDF close at hand so guests can view the exact lineup while browsing on mobile.",
+      "subtitle": "Classic group set menu",
+      "summary": "Seven shared main courses prepared for groups of six guests or more.",
+      "minimumGuests": 6,
+      "pricePerPerson": "Afl 55.00",
+      "serviceChargeNote": "15% service charge not included.",
+      "sections": [
+        {
+          "title": "Main Course",
+          "items": [
+            {
+              "name": "Land sizzling plate",
+              "description": "Tenderloin and chicken sauteed with the signature chef's sauce, served on a hot sizzling plate."
+            },
+            {
+              "name": "Beef with vegetables",
+              "description": "Sliced beef with assorted vegetables sauteed in oyster sauce."
+            },
+            {
+              "name": "Sweet sour chicken",
+              "description": "Sweet and sour sauce brewed with tomato paste, pineapple and garlic for a classic Asian taste."
+            },
+            {
+              "name": "Pork chop Chinese style",
+              "description": "Tender sliced pork chop with assorted vegetables."
+            },
+            {
+              "name": "Curry seafood",
+              "description": "Fresh shrimp, squid, fish and crab meat simmered with curry spices and assorted vegetables."
+            },
+            {
+              "name": "Cantonese roasted chicken",
+              "description": "Crispy roasted chicken with the chef's special seasoning."
+            },
+            {
+              "name": "Fried rice & French fries",
+              "description": "Egg fried rice wok-tossed with ham, chicken, sweet peas and a touch of light soy sauce, served with French fries."
+            }
+          ]
+        }
+      ],
       "filePath": "./Rijst Tafel 55.pdf",
-      "previewImagePath": "./assets/package-55.svg",
-      "highlights": [
-        "Set-menu focused experience",
-        "Great for first-time dine-in guests",
-        "Easy PDF view and download on mobile"
-      ]
+      "previewImagePath": "./assets/package-55.svg"
     },
     "rijstTafel65": {
       "title": "Rijst Tafel 65",
-      "subtitle": "Premium set menu",
-      "summary": "A richer rijsttafel selection for guests who want a more generous tasting spread with classic house specialties.",
-      "description": "The PDF is included for direct viewing or download. Pair it with the a la carte list when guests want to compare the set with individual orders.",
+      "subtitle": "Complete group set menu",
+      "summary": "A full set experience with soup, seven shared main courses, dessert and a hot drink.",
+      "minimumGuests": 6,
+      "pricePerPerson": "Afl 65.00",
+      "serviceChargeNote": "15% service charge not included.",
+      "sections": [
+        {
+          "title": "Appetizer",
+          "items": [
+            {
+              "name": "Wonton Soup or Chicken Vegetable Soup"
+            }
+          ]
+        },
+        {
+          "title": "Main Course",
+          "items": [
+            {
+              "name": "Land sizzling plate",
+              "description": "Tenderloin and chicken sauteed with the signature chef's sauce, served on a hot sizzling plate."
+            },
+            {
+              "name": "Beef with vegetables",
+              "description": "Sliced beef with assorted vegetables sauteed in oyster sauce."
+            },
+            {
+              "name": "Sweet sour chicken",
+              "description": "Sweet and sour sauce brewed with tomato paste, pineapple and garlic for a classic Asian taste."
+            },
+            {
+              "name": "Pork chop Chinese style",
+              "description": "Tender sliced pork chop with assorted vegetables."
+            },
+            {
+              "name": "Curry seafood",
+              "description": "Fresh shrimp, squid, fish and crab meat simmered with curry spices and assorted vegetables."
+            },
+            {
+              "name": "Cantonese roasted chicken",
+              "description": "Crispy roasted chicken with the chef's special seasoning."
+            },
+            {
+              "name": "Fried rice & French fries",
+              "description": "Egg fried rice wok-tossed with ham, chicken, sweet peas and a touch of light soy sauce, served with French fries."
+            }
+          ]
+        },
+        {
+          "title": "Dessert",
+          "items": [
+            {
+              "name": "Vanilla or Neapolitan ice cream",
+              "description": "Served with Chinese tea or coffee."
+            }
+          ]
+        }
+      ],
       "filePath": "./Rijst Tafel 65.pdf",
-      "previewImagePath": "./assets/package-65.svg",
-      "highlights": [
-        "Premium tasting-style package",
-        "Built from the official PDF menu",
-        "Best for guests comparing set versus single dishes"
-      ]
+      "previewImagePath": "./assets/package-65.svg"
     }
   }
 }

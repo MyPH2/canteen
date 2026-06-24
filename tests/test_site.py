@@ -94,6 +94,33 @@ class SiteContractTests(unittest.TestCase):
         self.assertIn("dine-in.html", index_html)
         self.assertIn("外卖菜单.png", index_html)
 
+    def test_rijsttafel_pdf_content_is_structured_as_menu_text(self):
+        data = json.loads(self.content_path.read_text(encoding="utf-8"))
+        menu_55 = data["menus"]["rijstTafel55"]
+        menu_65 = data["menus"]["rijstTafel65"]
+
+        for menu, price in ((menu_55, "Afl 55.00"), (menu_65, "Afl 65.00")):
+            self.assertEqual(menu["minimumGuests"], 6)
+            self.assertEqual(menu["pricePerPerson"], price)
+            self.assertIn("15%", menu["serviceChargeNote"])
+            self.assertIn("sections", menu)
+
+        sections_55 = {section["title"]: section["items"] for section in menu_55["sections"]}
+        sections_65 = {section["title"]: section["items"] for section in menu_65["sections"]}
+
+        self.assertEqual(len(sections_55["Main Course"]), 7)
+        self.assertEqual(len(sections_65["Main Course"]), 7)
+        self.assertIn("Appetizer", sections_65)
+        self.assertIn("Dessert", sections_65)
+        self.assertEqual(sections_65["Appetizer"][0]["name"], "Wonton Soup or Chicken Vegetable Soup")
+
+    def test_dine_in_page_has_branded_menu_structure(self):
+        dine_in_html = self.dine_in_path.read_text(encoding="utf-8")
+
+        self.assertIn("data-dine-shell", dine_in_html)
+        self.assertIn("dine-brand-mark", dine_in_html)
+        self.assertIn("dine-menu-heading", dine_in_html)
+
     def test_homepage_matches_poster_layout_contract(self):
         index_html = self.index_path.read_text(encoding="utf-8")
         styles_css = (ROOT / "styles.css").read_text(encoding="utf-8")
@@ -115,6 +142,13 @@ class SiteContractTests(unittest.TestCase):
         self.assertIn(".poster-frame--action", styles_css)
         self.assertIn(".poster-frame--banner", styles_css)
         self.assertIn("clip-path", styles_css)
+        self.assertIn("--poster-action-corner", styles_css)
+        self.assertIn(".poster-frame--action::before", styles_css)
+        self.assertIn(".poster-frame--action::after", styles_css)
+        self.assertIn("inset: 2px", styles_css)
+        self.assertIn("--poster-banner-corner", styles_css)
+        self.assertIn(".poster-frame--banner::before", styles_css)
+        self.assertIn(".poster-frame--banner::after", styles_css)
 
 
 if __name__ == "__main__":

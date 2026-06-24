@@ -1,4 +1,4 @@
-const DATA_URL = "./content.json";
+const DATA_URL = "./content.json?v=20260622-1";
 
 function iconMarkup(name) {
   const icons = {
@@ -189,11 +189,27 @@ function renderPackage(menu) {
   const pane = query("[data-menu-content]");
   pane.innerHTML = "";
 
+  if (!menu?.sections?.length) {
+    const error = document.createElement("p");
+    error.className = "status-note";
+    error.textContent = "This set menu is temporarily unavailable. Please refresh the page or view the PDF.";
+    pane.appendChild(error);
+    return;
+  }
+
   const card = document.createElement("article");
   card.className = "package-card";
 
+  const visual = document.createElement("div");
+  visual.className = "package-card__visual";
+
   const image = document.createElement("img");
   setImage(image, menu.previewImagePath, menu.title);
+
+  const priceBadge = document.createElement("div");
+  priceBadge.className = "package-price-badge";
+  priceBadge.innerHTML = `<span>Per person</span><strong>${menu.pricePerPerson}</strong>`;
+  visual.append(image, priceBadge);
 
   const body = document.createElement("div");
   body.className = "package-card__body";
@@ -206,18 +222,57 @@ function renderPackage(menu) {
   title.textContent = menu.title;
 
   const summary = document.createElement("p");
+  summary.className = "package-summary";
   summary.textContent = menu.summary;
 
-  const description = document.createElement("p");
-  description.textContent = menu.description;
+  const facts = document.createElement("div");
+  facts.className = "package-facts";
+  facts.innerHTML = `
+    <div><span>Minimum party</span><strong>${menu.minimumGuests} guests</strong></div>
+    <div><span>Service charge</span><strong>Not included</strong></div>
+  `;
 
-  const highlights = document.createElement("ul");
-  highlights.className = "highlight-list";
-  menu.highlights.forEach((item) => {
-    const li = document.createElement("li");
-    li.textContent = item;
-    highlights.appendChild(li);
+  const sections = document.createElement("div");
+  sections.className = "package-menu-sections";
+  menu.sections.forEach((section) => {
+    const sectionNode = document.createElement("section");
+    sectionNode.className = "package-menu-section";
+
+    const sectionTitle = document.createElement("h3");
+    sectionTitle.textContent = section.title;
+
+    const list = document.createElement("div");
+    list.className = "package-dish-list";
+    section.items.forEach((item, index) => {
+      const dish = document.createElement("article");
+      dish.className = "package-dish";
+
+      const marker = document.createElement("span");
+      marker.className = "package-dish__marker";
+      marker.textContent = String(index + 1).padStart(2, "0");
+
+      const copy = document.createElement("div");
+      const name = document.createElement("h4");
+      name.textContent = item.name;
+      copy.appendChild(name);
+
+      if (item.description) {
+        const description = document.createElement("p");
+        description.textContent = item.description;
+        copy.appendChild(description);
+      }
+
+      dish.append(marker, copy);
+      list.appendChild(dish);
+    });
+
+    sectionNode.append(sectionTitle, list);
+    sections.appendChild(sectionNode);
   });
+
+  const serviceNote = document.createElement("p");
+  serviceNote.className = "package-service-note";
+  serviceNote.textContent = menu.serviceChargeNote;
 
   const actions = document.createElement("div");
   actions.className = "package-actions";
@@ -236,8 +291,8 @@ function renderPackage(menu) {
   });
 
   actions.append(view, download);
-  body.append(eyebrow, title, summary, description, highlights, actions);
-  card.append(image, body);
+  body.append(eyebrow, title, summary, facts, sections, serviceNote, actions);
+  card.append(visual, body);
   pane.appendChild(card);
 }
 
@@ -305,6 +360,7 @@ function renderSidebar(data, state) {
 
 function renderDineIn(data) {
   document.title = `${data.brand.name} | Dine In Menu`;
+  setImage(query("[data-dine-logo]"), data.brand.logoPath, `${data.brand.name} logo`);
   query("[data-notice-title]").textContent = data.dineIn.noticeTitle;
   query("[data-notice-body]").textContent = data.dineIn.noticeBody;
   query("[data-dine-brand]").textContent = data.brand.name;
